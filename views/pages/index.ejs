@@ -1,0 +1,14 @@
+<%- include("../partials/bg.ejs") %>
+<body>
+    <% let currentTime = 0 %>
+    <% async function loop(){ %>
+        <img src="/images/cat.png"/>
+        <% currentTime += 1 %>
+        <% if (currentTime > 17) { %>
+            </br>
+            <% currentTime = 0 %>
+        <% } %>
+        <% loop() %>
+    <% } %>
+    <% loop() %>
+</body>
